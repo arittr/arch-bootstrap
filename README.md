@@ -4,6 +4,7 @@
 
 *See https://wiki.archlinux.org/index.php/Dell_XPS_15_9560 for additional info as needed.*
 
+
 ## Prework
 
 0. Download the Arch installer and write the ISO to a USB/external disk using Etcher: https://etcher.io/.
@@ -15,10 +16,12 @@
 	1. Change the SATA Mode from "RAID" to "AHCI" (unless you already did so in 2.1).
 	2. Disable Secure Boot.
 
+
 ## Start the installer
 
 4. Boot up the computer and hit F-12 during POST. Select the external disk/USB that has the Arch installer. Wait for the installer to boot.
 5. Once started, run `wifi-menu` and connect to WiFi.
+
 
 ## Wipe, Partition, and Format the disk
 
@@ -67,6 +70,7 @@
 	2. `mkdir /mnt/boot`
 	3. `mount /dev/nvme0n1p1 /mnt/boot`
 
+
 ## Bootstrap the Arch installation
 
 12. Ensure system clock is accurate
@@ -81,6 +85,7 @@
 		1. Change `relatime` for `/dev/mapper/cryptroot` to `noatime` (this supposedly reduces wear on your SSD).
 		2. (OPTIONAL) Make `/tmp` a ramdisk by adding the following line to /mnt/etc/fstab. This ensures `/tmp` erases on reboot.
 			1. `tmpfs    /tmp    tmpfs    defaults,noatime,mode=1777    0    0`
+
 
 ## Finish bootstrapping
 
@@ -143,6 +148,7 @@
 
 27. `reboot`
 
+
 ## If the system does not boot into the rEFInd bootloader
 
 *see https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Launching_UEFI_Shell*
@@ -152,6 +158,7 @@
 	2. `map` - take note of the device entry for your disk (e.g. whatever one says `GPT` somewhere).
 	3. `bcfg boot add 3 FS0:\EFI\refind\refind_x64.efi "rEFInd"` (assuming `FS0` is the device id found in 28.2).
 	4. Exit and reboot.
+
 
 ## Rejoice
 **You now have a bootable Arch installation, but this is where the real fun begins.**
