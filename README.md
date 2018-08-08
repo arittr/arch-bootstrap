@@ -1,6 +1,6 @@
 ## A simple guide to bootstrap Arch Linux on an XPS 15 9570
 
-**Expect this to take at approximately 2 hours**
+**Expect this to take at approximately 2 hours. Go slow, be patient, have fun.** 
 
 *See https://wiki.archlinux.org/index.php/Dell_XPS_15_9560 for additional info as needed.*
 
