@@ -4,7 +4,7 @@
 
 *See https://wiki.archlinux.org/index.php/Dell_XPS_15_9560 for additional info as needed.*
 
-### Prework
+## Prework
 
 0. Download the Arch installer and write the ISO to a USB/external disk using Etcher: https://etcher.io/.
 1. Boot into Windows and install any BIOS updates that might exist.
@@ -15,12 +15,12 @@
 	1. Change the SATA Mode from "RAID" to "AHCI" (unless you already did so in 2.1).
 	2. Disable Secure Boot.
 
-### Start the installer
+## Start the installer
 
 4. Boot up the computer and hit F-12 during POST. Select the external disk/USB that has the Arch installer. Wait for the installer to boot.
 5. Once started, run `wifi-menu` and connect to WiFi.
 
-### Wipe, Partition, and Format the disk
+## Wipe, Partition, and Format the disk
 
 6. Figure out the name and current partition structure of your disk.
 	1. `fdisk -l`
@@ -67,7 +67,7 @@
 	2. `mkdir /mnt/boot`
 	3. `mount /dev/nvme0n1p1 /mnt/boot`
 
-### Bootstrap the Arch installation
+## Bootstrap the Arch installation
 
 12. Ensure system clock is accurate
 	1. `timedatectl set-ntp true`
@@ -82,7 +82,7 @@
 		2. (OPTIONAL) Make `/tmp` a ramdisk by adding the following line to /mnt/etc/fstab. This ensures `/tmp` erases on reboot.
 			1. `tmpfs    /tmp    tmpfs    defaults,noatime,mode=1777    0    0`
 
-### Finish bootstrapping
+## Finish bootstrapping
 
 15. Enter the new system.
 	1. `arch-chroot /mnt`
@@ -143,7 +143,7 @@
 
 27. `reboot`
 
-### If the system does not boot into the rEFInd bootloader
+## If the system does not boot into the rEFInd bootloader
 
 *see https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Launching_UEFI_Shell*
 
@@ -153,7 +153,7 @@
 	3. `bcfg boot add 3 FS0:\EFI\refind\refind_x64.efi "rEFInd"` (assuming `FS0` is the device id found in 28.2).
 	4. Exit and reboot.
 
-### Rejoice
+## Rejoice
 **You now have a bootable Arch installation, but this is where the real fun begins.**
 
 29. Install the NVIDIA drivers. See https://wiki.archlinux.org/index.php/NVIDIA#Installation, but this is probably as simple as `sudo pacman -S nvidia`.
