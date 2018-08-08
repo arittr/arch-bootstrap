@@ -2,15 +2,15 @@
 
 **Expect this to take at approximately 2 hours**
 
-*See [https://wiki.archlinux.org/index.php/Dell_XPS_15_9560] for additional info as needed.*
+*See https://wiki.archlinux.org/index.php/Dell_XPS_15_9560 for additional info as needed.*
 
 ### Prework
 
-0. Download the Arch installer and write the ISO to a USB/external disk using Etcher: [https://etcher.io/].
+0. Download the Arch installer and write the ISO to a USB/external disk using Etcher: https://etcher.io/.
 1. Boot into Windows and install any BIOS updates that might exist.
 2. Dual boot prework - **skip this step if you plan to single boot Linux (or install Windows later)**.
-	1. Switch Windows 10 from RAID/IDE to AHCI: [https://triplescomputers.com/blog/uncategorized/solution-switch-windows-10-from-raidide-to-ahci-operation/]
-	2. Resize your Windows partition: [https://www.lifewire.com/how-to-open-disk-management-2626080]
+	1. Switch Windows 10 from RAID/IDE to AHCI: https://triplescomputers.com/blog/uncategorized/solution-switch-windows-10-from-raidide-to-ahci-operation/
+	2. Resize your Windows partition: https://www.lifewire.com/how-to-open-disk-management-2626080
 3. Boot into the UEFI/BIOS (e.g. hit F-12 during POST).
 	1. Change the SATA Mode from "RAID" to "AHCI" (unless you already did so in 2.1).
 	2. Disable Secure Boot.
@@ -145,7 +145,7 @@
 
 ### If the system does not boot into the rEFInd bootloader
 
-*see [https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Launching_UEFI_Shell]*
+*see https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Launching_UEFI_Shell*
 
 28. Manually add the EFI boot entry.
 	1. Boot back into the Arch USB, before the installer starts select `EFI manager v2` or similar.
@@ -156,12 +156,12 @@
 ### Rejoice
 **You now have a bootable Arch installation, but this is where the real fun begins.**
 
-29. Install the NVIDIA drivers. See [https://wiki.archlinux.org/index.php/NVIDIA#Installation], but this is probably as simple as `sudo pacman -S nvidia`.
+29. Install the NVIDIA drivers. See https://wiki.archlinux.org/index.php/NVIDIA#Installation, but this is probably as simple as `sudo pacman -S nvidia`.
 
 30. `nvidia-smi` - do you see your card? If so, be happy this worked the first time...
 
-31. Install Bumblebee. See [https://wiki.archlinux.org/index.php/bumblebee].
+31. Install Bumblebee. See https://wiki.archlinux.org/index.php/bumblebee.
 
-32. Install *everything else you need to have a usable computer*. See `pacman_list.txt` for suggestions. I **highly** suggest you begin with LightDM ([https://wiki.archlinux.org/index.php/LightDM]). You can then proceed to installing a Desktop Environment ([https://wiki.archlinux.org/index.php/desktop_environment]) or i3 ([https://wiki.archlinux.org/index.php/i3]).
+32. Install *everything else you need to have a usable computer*. See `pacman_list.txt` for suggestions. I **highly** suggest you begin with `LightDM` (https://wiki.archlinux.org/index.php/LightDM). `GDM` seems to be unstable on this system at this time. You can then proceed to installing a Desktop Environment (https://wiki.archlinux.org/index.php/desktop_environment) or i3 (https://wiki.archlinux.org/index.php/i3).
 
 *Remember this is supposed to be fun - but also a little overwhelming. Go slow, think about your choices, and understand getting a usable daily system will likely be a long and evolving process. Be patient.*
