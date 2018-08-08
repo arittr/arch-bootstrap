@@ -144,7 +144,7 @@
 26. Ensure the EFI boot entry was written.
 	1. `efibootmgr -v`
 	2. Verify you see an entry for `rEFInd`.
-	3. Verify `BootOrder` has that entry's number first (e.g. `0001,0002...` where `0001` is rEFInd.
+	3. Verify `BootOrder` has that entry's number first (e.g. `0001,0002...` where `0001` is rEFInd).
 
 27. `reboot`
 
@@ -167,7 +167,7 @@
 
 30. `nvidia-smi` - do you see your card? If so, be happy this worked the first time...
 
-31. Install Bumblebee. See https://wiki.archlinux.org/index.php/bumblebee.
+31. Install Bumblebee. See https://wiki.archlinux.org/index.php/bumblebee. Do not install `bbswitch` - it is currently broken. Check https://bbs.archlinux.org/viewtopic.php?id=238389 for potential fixes.
 
 32. Install *everything else you need to have a usable computer*. See `pacman_list.txt` for suggestions. I **highly** suggest you begin with `LightDM` (https://wiki.archlinux.org/index.php/LightDM). `GDM` seems to be unstable on this system at this time. You can then proceed to installing a Desktop Environment (https://wiki.archlinux.org/index.php/desktop_environment) or i3 (https://wiki.archlinux.org/index.php/i3).
 
