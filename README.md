@@ -40,7 +40,7 @@
 		3. Select `Type` - `EFI System`.
 	4. Create the Swap partition.
 		1. Select `New`.
-		2. Make the partition size `16G` (or 32G depending on preference).
+		2. Make the partition size `16G` (or `32G` depending on preference).
 		3. Select `Type` - `Linux swap`.
 	5. Create the Root partition.
 		1. Select `New`.
