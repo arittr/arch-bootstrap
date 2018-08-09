@@ -97,7 +97,7 @@
 	2. `hwclock --systohc`
 
 17. Set the hostname.
-	1. `echo myhostname > /etc/hostname` (assuming your hostname is `myhostname` - this should be all lower case).
+	1. `hostnamectl set-hostname <myhostname>` (the hostname should be all lower case).
 
 18. Update the locale.
 	1. `vim /etc/locale.gen`
